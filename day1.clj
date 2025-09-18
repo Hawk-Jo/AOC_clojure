@@ -7,3 +7,7 @@
        (filter even?)
        (map #(* % %)))
   :rcf)
+
+(comment
+  (println "hello")
+  :rcf)
