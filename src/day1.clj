@@ -20,4 +20,9 @@
                 (line-seq r)))))
 ;; 첫 twice 찾기
 (defn find_first_twice [numbers]
-  loop())
+  (loop [records #{0} current 0 process (cycle numbers)]
+       (let [next (+ current (first process))]
+       (if (records next)
+         next
+         (recur (conj records next) next (rest process))))))
+(find_first_twice nums)
