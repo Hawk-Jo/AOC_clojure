@@ -5,3 +5,5 @@
 (def texts
   (with-open [r (io/reader (io/resource "resources/day2_input.txt"))]
     (doall (line-seq r))))
+
+(defn frequencies (seq texts))
